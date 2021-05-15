@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hebeu.mapper.EmployeeMapper">
+
+	<resultMap id="selectemployeeexcel" type="employee">
+		<result property="name" column="name"></result>
+		<result property="gender" column="gender"></result>
+		<result property="birthday" column="birthday"></result>
+		<result property="telephone" column="telephone"></result>
+		<result property="email" column="email"></result>
+		<result property="address" column="address"></result>
+		<result property="education" column="education"></result>
+		<result property="password" column="password"></result>
+		<result property="notes" column="notes"></result>
+		<association property="department" javaType="department">
+			<result property="name" column="dname"></result>
+		</association>
+		<association property="position" javaType="position">
+			<result property="name" column="pname"></result>
+		</association>
+	</resultMap>
+
+	<resultMap id="s" type="overtimestatistics">
+		<result property="empid" column="employee_number"></result>
+		<result property="counts" column="count(*)"></result>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id, employee_number, name, gender, birthday, telephone, email, address, photo,
+		education, department_number, position_number, in_time, password, notes
+	</sql>
+	
+	<select id="checkLogin" resultType="Employee">
+		select
+		<include refid="Base_Column_List" />
+		from employee 
+		where employee_number = #{employeeNumber} and password = #{password}
+	</select>
+	
+	<select id="selectByNumber" parameterType="java.lang.Integer" resultType="Employee">
+		select
+		<include refid="Base_Column_List" />
+		from employee
+		where employee_number = #{employeeNumber}
+	</select>
+
+	<select id="selectpermisbyid" resultType="Permis">
+		select permission_sign from tab_user_role t,tab_role_permis r,tab_permis p
+		where t.user_code = #{username} and t.role_id =r.role_id and r.permis_id=p.id
+	</select>
+
+	<select id="selectrolebyid" resultType="Permis">
+		select role_sign from tab_user_role ur,tab_role r
+		where ur.user_code=#{username} and ur.role_id=r.id
+	</select>
+	
+	<select id="selectlistbystatus" resultType="History">
+		select * from history where status="在职"
+
+	</select>
+
+	<insert id="insertuserrole" >
+		insert into tab_user_role (user_code,role_id) values (#{employeeNumber},#{role})
+	</insert>
+
+	<select id="selectemployeeexcel" resultMap="selectemployeeexcel">
+		select e.name,e.gender,e.birthday,e.telephone,e.email,e.address,e.education,e.password,e.notes,d.name as dname,p.name as pname
+		from employee e,department d,position p
+		where e.department_number=d.department_number and e.position_number=p.position_number
+	</select>
+
+	<delete id="deleterolebyid">
+		delete from tab_user_role where user_code=#{employeeNumber}
+	</delete>
+
+	<select id="selectcountlist" resultMap="s">
+		select employee_number,count(*) from overtime
+		<if test="startdate==null and stopdate!=null">
+			where day &lt; #{stopdate}
+		</if>
+		<if test="startdate!=null and stopdate==null">
+			where day &gt; #{startdate}
+		</if>
+		<if test="startdate!=null and stopdate!=null and startdate!=stopdate">
+			where day &gt; #{startdate} and day &lt; #{stopdate}
+		</if>
+		<if test="startdate==null and stopdate==null">
+
+		</if>
+		<if test="startdate==stopdate and startdate!=null">
+			where day=#{startdate}
+		</if>
+
+		GROUP BY employee_number;
+	</select>
+
+
+</mapper>

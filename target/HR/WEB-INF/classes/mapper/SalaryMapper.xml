@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.hebeu.mapper.SalaryMapper">
+    
+    <resultMap id="salarylist" type="salary">
+        <id property="id" column="id" />
+        <result property="basicSalary" column="basic_salary"/>
+        <result property="inTime" column="in_time" />
+        <result property="notes" column="notes"/>
+        <association property="employee" javaType="employee">
+            <result property="name" column="name"/>
+        </association>
+        <association property="department" javaType="department">
+            <result property="name" column="dname"/>
+        </association>
+        <association property="position" javaType="position">
+            <result property="name" column="pname"/>
+        </association>
+    </resultMap>
+
+    <select id="selectsalarylist" resultMap="salarylist" >
+            select s.id,s.basic_salary,s.in_time,s.notes,e.name,d.name as dname,p.name pname
+            from salary s,employee e,department d,position p where
+            s.user_code=e.employee_number and e.department_number=d.department_number and e.position_number=p.position_number
+    </select>
+
+    <select id="selectbyid" resultMap="salarylist">
+        select s.id,s.basic_salary,s.in_time,s.notes,e.name,d.name as dname,p.name pname
+            from salary s,employee e,department d,position p where
+            s.user_code=e.employee_number and e.department_number=d.department_number and s.id=#{id} and e.position_number=p.position_number
+    </select>
+
+
+
+</mapper>
