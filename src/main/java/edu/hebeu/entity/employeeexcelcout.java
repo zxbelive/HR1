@@ -11,7 +11,7 @@ public class employeeexcelcout {
     @ExcelProperty("性别")
     private String gender;
     @ExcelProperty("出生日期")
-    private Date birthday;
+    private String birthday;
     @ExcelProperty("联系方式")
     @ColumnWidth(30)
     private String telephone;
@@ -48,11 +48,11 @@ public class employeeexcelcout {
         this.gender = gender;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

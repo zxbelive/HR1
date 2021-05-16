@@ -191,7 +191,7 @@ public class EmployeeController {
 		Employee employee2 = (Employee) session.getAttribute("loged");
 		employeeService.updateEmployee(employee, status, employee2.getName());
 		if (employee.getPositionNumber()==null){
-			return "forward:/employee/welcome.do";
+			return "forward:/employee/listPage.do?pageNo=1";
 		}
 		else {
 			if (employee.getPositionNumber() == 3003) {
@@ -202,7 +202,7 @@ public class EmployeeController {
 				roleService.updaterolemanage(employee.getEmployeeNumber());
 			}
 		}
-		return "forward:/employee/welcome.do";
+		return "forward:/employee/listPage.do?pageNo=1";
 	}
 	
 	@RequestMapping("/{id}/delete.do")

@@ -13,6 +13,7 @@ import edu.hebeu.service.EmployeeService;
 import edu.hebeu.service.HistoryService;
 import edu.hebeu.service.PositionService;
 import edu.hebeu.util.EmployeeListener;
+import edu.hebeu.util.MTimeUtil;
 import org.apache.commons.io.FileUtils;
 import org.aspectj.lang.annotation.After;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,7 +56,8 @@ public class ExcelController {
             employeeexcelcout employeeexcel = new employeeexcelcout();
             employeeexcel.setName(employee.getName());
             employeeexcel.setAddress(employee.getAddress());
-            employeeexcel.setBirthday(employee.getBirthday());
+            String s = MTimeUtil.dateFormat(employee.getBirthday());
+            employeeexcel.setBirthday(s);
             employeeexcel.setDepartmentName(employee.getDepartment().getName());
             employeeexcel.setPositionName(employee.getPosition().getName());
             employeeexcel.setEducation(employee.getEducation());
