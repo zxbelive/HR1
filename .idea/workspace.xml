@@ -270,81 +270,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="hebeu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="hebeu" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HR" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="ToolWindowRun.ShowToolbar" value="false" />
@@ -660,7 +586,7 @@
       <workItem from="1653720205100" duration="458000" />
       <workItem from="1653723831271" duration="836000" />
       <workItem from="1653725120703" duration="1519000" />
-      <workItem from="1653739377528" duration="1269000" />
+      <workItem from="1653739377528" duration="1814000" />
     </task>
     <task id="LOCAL-00001" summary="第一次更新">
       <created>1621140161846</created>
@@ -705,7 +631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450782000" />
+    <option name="totallyTimeSpent" value="451327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,7 +645,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6899489" weight="0.34114978" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6899489" visible="true" weight="0.34114978" />
       <window_info id="Structure" order="1" sideWeight="0.7240204" side_tool="true" weight="0.27382752" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
