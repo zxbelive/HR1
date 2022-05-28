@@ -237,8 +237,8 @@
 							</li>
 							<li><a class="J_menuItem" href="<%=path %>/overtime/<%=employee.getEmployeeNumber() %>/listPage.do?pageNo=1">加班管理</a>
 							</li>
-							<li><a class="J_menuItem" href="<%=path %>/overtime/countlist.do">加班统计</a>
-							</li>
+							<%--<li><a class="J_menuItem" href="<%=path %>/overtime/countlist.do">加班统计</a>--%>
+							<%--</li>--%>
 						</ul>
 					</li>
 					</shiro:hasRole>
@@ -396,10 +396,10 @@
                                 <li><a href="<%=path %>/employee/oneself/<%=employee.getId() %>/detial.do" target="J_iframe">我的账户</a>
                                 </li>
                                 <li class="divider"></li>
-                                <li><a href="<%=path %>/employee/login.do">退出登录</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="<%=path %>/employee/logout.do">注销登录</a>
+                                <%--<li><a href="<%=path %>/employee/login.do">退出登录</a>--%>
+                                <%--</li>--%>
+                                <%--<li class="divider"></li>--%>
+                                <li><a href="<%=path %>/employee/logout.do">退出登录</a>
                                 </li>
                             </ul>
                         </li>

@@ -237,8 +237,8 @@
 							</li>
 							<li><a class="J_menuItem" href="<%=path %>/overtime/<%=employee.getEmployeeNumber() %>/listPage.do?pageNo=1">加班管理</a>
 							</li>
-							<li><a class="J_menuItem" href="<%=path %>/overtime/countlist.do">加班统计</a>
-							</li>
+							<%--<li><a class="J_menuItem" href="<%=path %>/overtime/countlist.do">加班统计</a>--%>
+							<%--</li>--%>
 						</ul>
 					</li>
 					</shiro:hasRole>

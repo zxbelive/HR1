@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Random;
 
 
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +37,7 @@ public final class CaptchaUtil {
 	    private static Random random = new Random();
 	    
 	    /*
-	     * 获取6位随机数
+	     * 获取4位随机数
 	     */
 	    private static String getRandomString()
 	    {
@@ -101,8 +102,9 @@ public final class CaptchaUtil {
 
 	        // 转成JPEG格式
 	        ServletOutputStream out = response.getOutputStream();
-	        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
-	        encoder.encode(bi);
+	        //JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);
+	        //encoder.encode(bi);
+			ImageIO.write(bi, "jpeg", out);
 	        out.flush();
 	    }
 

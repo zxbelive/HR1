@@ -79,15 +79,15 @@
 	                <%--</div>--%>
 	                <br>
 					<p>
-					  <h3 style="color: red">${error}</h1>					  
+					  <h3 style="color: red">${error}</h3>
 					</p>									
 					<button class="btn btn-success btn-block" type="submit">登录</button>
 				</form>
 			</div>
 		</div>
-		<div class="signup-footer">
-			<div class="pull-left">&copy; CDIO</div>
-		</div>
+		<%--<div class="signup-footer">--%>
+			<%--<div class="pull-left">&copy; CDIO</div>--%>
+		<%--</div>--%>
 	</div>
 	
 	
